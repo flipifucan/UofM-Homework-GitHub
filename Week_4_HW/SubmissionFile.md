@@ -73,9 +73,9 @@
 
 3. Command to run an audit: sudo lynis audit system
 
-4. Provide a report from the Lynis output on what can be done to harden the system. see screen shots...
-
-    - Screenshot of report output:
+4. Provide a report from the Lynis output on what can be done to harden the system. 
+Updating the system are just a few to begin with. Maybe use some external storage. 
+    - Screenshot of report output:see screen shots...
 
 
 ### Bonus
@@ -87,7 +87,7 @@
 
 4. Provide a report from the chrootkit output on what can be done to harden the system.
 Removing a lot of un wanted applications.Updating the system are just a few to begin with. Maybe use some external storage. 
-    - Screenshot of end of sample output: See screen shot
+    - Screenshot of end of sample output: See screen shots ...
 
 ---
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
