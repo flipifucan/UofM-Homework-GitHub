@@ -86,6 +86,7 @@
 3. Command to run expert mode: sudo chkrootkit -x  well that was cool.
 
 4. Provide a report from the chrootkit output on what can be done to harden the system.
+Removing a lot of un wanted applications.Updating the system are just a few to begin with. Maybe use some external storage. 
     - Screenshot of end of sample output: See screen shot
 
 ---
