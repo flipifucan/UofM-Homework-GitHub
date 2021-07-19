@@ -21,13 +21,13 @@
 
     - Command to inspect permissions: ls -l group
 
-    - Command to set permissions (if needed): sudo chmod 604 group
+    - Command to set permissions (if needed): sudo chmod 644 group
 
 4. Permissions on `/etc/passwd` should allow `root` read and write access, and allow everyone else read access only.
 
     - Command to inspect permissions: ls -l passwd
 
-    - Command to set permissions (if needed): sudo chmod 604 passwd
+    - Command to set permissions (if needed): sudo chmod 644 passwd
 
 ### Step 2: Create User Accounts
 
@@ -59,7 +59,7 @@
 
 3. Create a shared folder for this group at `/home/engineers`.
 
-    - Command to create the shared folder:sudo mkdir /home/engineers
+    - Command to create the shared folder: sudo mkdir /home/engineers
 
 4. Change ownership on the new engineers' shared folder to the `engineers` group.
 
@@ -75,7 +75,7 @@
 
 4. Provide a report from the Lynis output on what can be done to harden the system. 
 Updating the system are just a few to begin with. Maybe use some external storage. 
-    - Screenshot of report output:see screen shots...
+    - Screenshot of report output: See screen shots...
 
 
 ### Bonus
