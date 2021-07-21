@@ -64,7 +64,7 @@
 4. Change ownership on the new engineers' shared folder to the `engineers` group.
 
     - Command to change ownership of engineer's shared folder to engineer group: sudo chown :engineers engineers
-    <img src="/WK_4_S-shots/change_owners">
+    <img src="/WK_4_S-shots/change_owners.png">
 
 ### Step 4: Lynis Auditing
 
@@ -77,10 +77,10 @@
 4. Provide a report from the Lynis output on what can be done to harden the system. 
 Updating the system are just a few to begin with. Maybe use some external storage. 
     - Screenshot of report output: See screen shots...
-<img src="/WK_4_S-shots/system_audit">
-<img src="/WK_4_S-shots/check_status_lynis">
-<img src="/WK_4_S-shots/lynis_output">
-<img src="/WK_4_S-shots/install_Lynis">
+<img src="/WK_4_S-shots/system_audit.png">
+<img src="/WK_4_S-shots/check_status_lynis.png">
+<img src="/WK_4_S-shots/lynis_output.png">
+<img src="/WK_4_S-shots/install_Lynis.png">
 
 ### Bonus
 1. Command to install chkrootkit: sudo apt-get chkrootkit
@@ -92,8 +92,8 @@ Updating the system are just a few to begin with. Maybe use some external storag
 4. Provide a report from the chrootkit output on what can be done to harden the system.
 Removing a lot of un wanted applications.Updating the system are just a few to begin with. Maybe use some external storage. 
     - Screenshot of end of sample output: See screen shots ...
-    <img src="/WK_4_S-shots/chkrootkit_output">
-    <img src="/WK_4_S-shots/Harden_the_system">
+    <img src="/WK_4_S-shots/chkrootkit_output.png">
+    <img src="/WK_4_S-shots/Harden_the_system.png">
 
 ---
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
