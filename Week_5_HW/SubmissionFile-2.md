@@ -12,17 +12,18 @@ Save and submit the completed file for your homework submission.
 <img src="/Week_5_HW/step1_1.png">
 
 2. Command to **create** the `Javaless_Doc.tar` archive from the `TarDocs/` directory, while excluding the `TarDocs/Documents/Java` directory:sudo tar -cvvf Javaless_Doc.tar --exclude=/TarDocs/Documents/Java TarDocs
+<img src="/Week_5_HW/step1_2.png">
 
 3. Command to ensure `Java/` is not in the new `Javaless_Docs.tar` archive: tar vvf Javaless_Doc.tar | grep Java
 
 
 **Bonus** 
 - Command to create an incremental archive called `logs_backup_tar.gz` with only changed files to `snapshot.file` for the `/var/log` directory:
-
+sudo tar --listed-incremental=snapshot.file -cvzf logs_backup.tar.gz /var/log
 #### Critical Analysis Question
 
 - Why wouldn't you use the options `-x` and `-c` at the same time with `tar`?
-
+You may not want to extract and create at the same time. -c creates a new archive and -x will extract files. I really don't think you should extract and create at the same time period. 
 ---
 
 ### Step 2: Create, Manage, and Automate Cron Jobs
