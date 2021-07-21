@@ -4,30 +4,30 @@
 
 1. Permissions on `/etc/shadow` should allow only `root` read and write access.
 
-    - Command to inspect permissions: ls -l shadow
+    - Command to inspect permissions: sudo ls -l /etc/shadow
 
-    - Command to set permissions (if needed): sudo chmod 600 shadow
+    - Command to set permissions (if needed): sudo chmod 600 /etc/shadow
                                               
                                               
                                               
 
 2. Permissions on `/etc/gshadow` should allow only `root` read and write access.
 
-    - Command to inspect permissions: ls -l gshadow
+    - Command to inspect permissions: sudo ls -l /etc/gshadow
 
-    - Command to set permissions (if needed): sudo chmod 600 gshadow
+    - Command to set permissions (if needed): sudo chmod 600 /etc/gshadow
 
 3. Permissions on `/etc/group` should allow `root` read and write access, and allow everyone else read access only.
 
-    - Command to inspect permissions: ls -l group
+    - Command to inspect permissions: sudo ls -l /etc/group
 
-    - Command to set permissions (if needed): sudo chmod 644 group
+    - Command to set permissions (if needed): Not needed. but if so sudo chmod 644 /etc/group
 
 4. Permissions on `/etc/passwd` should allow `root` read and write access, and allow everyone else read access only.
 
-    - Command to inspect permissions: ls -l passwd
+    - Command to inspect permissions: sudo ls -l /etc/passwd
 
-    - Command to set permissions (if needed): sudo chmod 644 passwd
+    - Command to set permissions (if needed):Not needed but if so. sudo chmod 644 /etc/passwd
 
 ### Step 2: Create User Accounts
 
@@ -64,6 +64,7 @@
 4. Change ownership on the new engineers' shared folder to the `engineers` group.
 
     - Command to change ownership of engineer's shared folder to engineer group: sudo chown :engineers engineers
+    <img src="/WK_4_S-shots/change_owners">
 
 ### Step 4: Lynis Auditing
 
@@ -76,7 +77,10 @@
 4. Provide a report from the Lynis output on what can be done to harden the system. 
 Updating the system are just a few to begin with. Maybe use some external storage. 
     - Screenshot of report output: See screen shots...
-
+<img src="/WK_4_S-shots/system_audit">
+<img src="/WK_4_S-shots/check_status_lynis">
+<img src="/WK_4_S-shots/lynis_output">
+<img src="/WK_4_S-shots/install_Lynis">
 
 ### Bonus
 1. Command to install chkrootkit: sudo apt-get chkrootkit
@@ -88,6 +92,8 @@ Updating the system are just a few to begin with. Maybe use some external storag
 4. Provide a report from the chrootkit output on what can be done to harden the system.
 Removing a lot of un wanted applications.Updating the system are just a few to begin with. Maybe use some external storage. 
     - Screenshot of end of sample output: See screen shots ...
+    <img src="/WK_4_S-shots/chkrootkit_output">
+    <img src="/WK_4_S-shots/Harden_the_system">
 
 ---
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
