@@ -10,6 +10,7 @@ Save and submit the completed file for your homework submission.
 
 1. Command to **extract** the `TarDocs.tar` archive to the current directory: tar -xvvf TarDocs.tar 
 <img src="/Week_5_HW/IMAGE/step1_1.png">
+![pic 1](IMAGE/step1_1.png)
 
 2. Command to **create** the `Javaless_Doc.tar` archive from the `TarDocs/` directory, while excluding the `TarDocs/Documents/Java` directory:sudo tar -cvvf Javaless_Doc.tar --exclude='TarDocs/Documents/Java' TarDocs
 ( Important isuue is that we use relative path not absolute, and use the single quotes dam it!!! I ran this 40 times until it finally worked without cheating and deleting files via interface:))
@@ -30,7 +31,12 @@ You may not want to extract and create at the same time. -c creates a new archiv
 ### Step 2: Create, Manage, and Automate Cron Jobs
 
 1. Cron job for backing up the `/var/log/auth.log` file:
-0 6 * * 3 tar -czf /auth_backup.tgz /var/log/auth.log
+I ran the code below to test my theory. I wanted to make sure that it created the file in the designated location at the time I specified. AND IT DID!!!
+The screen shot is my result for my test of the job.
+33 10 * * 5 tar -czf /home/sysadmin/Projects/auth_backup.tgz /var/log/auth.log
+0 6 * * 3 tar -czf /home/sysadmin/Projects/auth_backup.tgz /var/log/auth.log
+<img src="Week_5_HW/IMAGE/step2_1cron.png">
+![step2 1](IMAGE/step2_1cron.png)
 ---
 
 ### Step 3: Write Basic Bash Scripts
