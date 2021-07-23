@@ -80,9 +80,13 @@
 Updating the system are just a few to begin with. Maybe use some external storage. 
     - Screenshot of report output: See screen shots...
 <img src="/Week_4_HW/IMAGE/system_audit.png">
+![image 1](IMAGE/system_audit.png)
 <img src="/Week_4_HW/IMAGE/check_status_lynis.png">
-<img src="/Week_4_HW/IMAGE/lynis_output.png">
+![image 2](IMAGE/check_status_lynis.png)
+<img src="/Week_4_HW/IMAGE/Lynis_output.png">
+![image 3](IMAGE/Lynis_output.png)
 <img src="/Week_4_HW/IMAGE/install_Lynis.png">
+![image 4](IMAGE/install_Lynis.png)
 
 ### Bonus
 1. Command to install chkrootkit: sudo apt-get chkrootkit
