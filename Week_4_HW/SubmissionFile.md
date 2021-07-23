@@ -66,7 +66,7 @@
     - Command to change ownership of engineer's shared folder to engineer group: sudo chown :engineers engineers
     <img src="/Week_4_HW/IMAGE/change_owners.png>
 
-![descprition](change_owners.png)
+![descprition](IMAGE/change_owners.png)
 
 ### Step 4: Lynis Auditing
 
