@@ -36,6 +36,8 @@ The screen shot is my result for my test of the job.
 <br>
 33 10 * * 5 tar -czf /home/sysadmin/Projects/auth_backup.tgz /var/log/auth.log
 <br>
+This is the code for the assignment.
+<br>
 0 6 * * 3 tar -czf /home/sysadmin/Projects/auth_backup.tgz /var/log/auth.log
 <img src="/Week_5_HW/IMAGE/step2_1cron.png">
 ![step2 1](IMAGE/step2_1cron.png)
