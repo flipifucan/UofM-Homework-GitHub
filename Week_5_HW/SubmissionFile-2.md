@@ -34,9 +34,10 @@ You may not want to extract and create at the same time. -c creates a new archiv
 I ran the code below to test my theory. I wanted to make sure that it created the file in the designated location at the time I specified. AND IT DID!!!
 The screen shot is my result for my test of the job.
 33 10 * * 5 tar -czf /home/sysadmin/Projects/auth_backup.tgz /var/log/auth.log
+<br>
 0 6 * * 3 tar -czf /home/sysadmin/Projects/auth_backup.tgz /var/log/auth.log
 <img src="/Week_5_HW/IMAGE/step2_1cron.png">
-<br>
+
 ![step2 1](IMAGE/step2_1cron.png)
 ---
 
