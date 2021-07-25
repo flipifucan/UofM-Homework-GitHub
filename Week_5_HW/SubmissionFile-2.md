@@ -15,6 +15,7 @@ Save and submit the completed file for your homework submission.
 2. Command to **create** the `Javaless_Doc.tar` archive from the `TarDocs/` directory, while excluding the `TarDocs/Documents/Java` directory:sudo tar -cvvf Javaless_Doc.tar --exclude='TarDocs/Documents/Java' TarDocs
 ( Important isuue is that we use relative path not absolute, and use the single quotes dam it!!! I ran this 40 times until it finally worked without cheating and deleting files via interface:))
 <img src="/Week_5_HW/IMAGE/step1_2.png">
+![pic 2](IMAGE/step1_2.png)
 
 3. Command to ensure `Java/` is not in the new `Javaless_Docs.tar` archive: tar vvf Javaless_Doc.tar | grep Java
 
@@ -46,18 +47,64 @@ This is the code for the assignment below.
 ### Step 3: Write Basic Bash Scripts
 
 1. Brace expansion command to create the four subdirectories:
-
+    sysadmin@UbuntuDesktop:~$ mkdir ~/backups/{freemem,diskuse,openlist,freedisk}
+    <img src="/Week_5_HW/IMAGE/step3backups.png">
+![step3 1](IMAGE/step3backups.png)
 2. Paste your `system.sh` script edits below:
 
     ```bash
     #!/bin/bash
     [Your solution script contents here]
+
+
+    #!/bin/bash
+
+# INSTRUCTIONS: Edit the following placeholder command a$
+# For example: cpu_usage_tool > ~/backups/cpuuse/cpu_usa$
+# The cpu_usage_tool is the command and ~/backups/cpuuse$
+# In the above example, the `cpu_usage_tool` command wil$
+# Do not forget to use the -h option for free memory, di$
+
+
+# Free memory output to a free_mem.txt file
+command > ~/filepath
+
+free -dh > ~/backups/freemem/free_mem.txt
+
+# Disk usage output to a disk_usage.txt file
+command > ~/filepath
+ 
+du -sh > ~/backups/diskuse/disk_usage.txt
+
+# List open files to a open_list.txt file
+command > ~/filepath
+ 
+lsof -h > ~/backups/openlist/open_list.txt
+
+# Free disk space to a free_disk.txt file
+command > ~/filepath
+
+df -h > ~/backups/freedisk/free_disk.txt
     ```
 
+
+<img src="/Week_5_HW/IMAGE/step3backupsnano.png">
+
+![step3 2](IMAGE/step3backupsnano.png)
+
+Optional:
+
+<img src="/Week_5_HW/IMAGE/catfreedisk.png">
+
+![Optional](IMAGE/catfreedisk.png)
+
+
 3. Command to make the `system.sh` script executable:
+    sudo chmod +x system.sh
 
 **Optional**
 - Commands to test the script and confirm its execution:
+    sudo ls -l system.sh
 
 **Bonus**
 - Command to copy `system` to system-wide cron directory:
@@ -74,19 +121,35 @@ This is the code for the assignment below.
 
     ```bash
     [Your logrotate scheme edits here]
+    /var/log/auth.log {
+    missingok
+    weekly
+    delaycompress
+    compress
+    rotate 7
+    notifempty
+    endscript
+}
+    
+
     ```
 ---
 
 ### Bonus: Check for Policy and File Violations
 
 1. Command to verify `auditd` is active:
+    systemctl status auditd 
 
 2. Command to set number of retained logs and maximum log file size:
 
     - Add the edits made to the configuration file below:
+    sudo nano /etc/audit/auditd.conf
 
     ```bash
     [Your solution edits here]
+    max_log_file = 35
+    num_logs = 7
+
     ```
 
 3. Command using `auditd` to set rules for `/etc/shadow`, `/etc/passwd` and `/var/log/auth.log`:
