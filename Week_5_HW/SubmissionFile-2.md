@@ -221,9 +221,9 @@ sudo journalctl --disk-usage
 sudo journalctl --vacuum-file=2
 Now I really have to head up stairs and do the vacuuming lol.
 
-<img src="/Week_5_HW/IMAGE/vacuumingisdone.png">
+<img src="/Week_5_HW/IMAGE/Vacuumingisdone.png">
 
-![Optional](IMAGE/vacuumingisdone.png)
+![Optional](IMAGE/Vacuumingisdone.png)
 
 1. Command to filter all log messages with priority levels between zero and two, and save output to `/home/sysadmin/Priority_High.txt`:
 sudo journalctl -p 0 >> /home/sysadmin/Priority_High.txt
