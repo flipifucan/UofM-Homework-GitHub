@@ -159,38 +159,93 @@ Optional:
 
     ```bash
     [Your solution edits here]
+    -w /etc/passwd -p wra -k hashpass_audit
+    -w /etc/shadow -p wra -k userpass_audit
+    -w /var/log/auth.log -p wra -k authlog_audit
     ```
 
+    <img src="/Week_5_HW/IMAGE/bonusstep3.png">
+
+![Optional](IMAGE/bonusstep3.png)
+
 4. Command to restart `auditd`:
+   sudo systemctl restart auditd
+
+   <img src="/Week_5_HW/IMAGE/restartaduditd.png">
+
+![Optional](IMAGE/restartauditd.png)
 
 5. Command to list all `auditd` rules:
+   sudo auditctl -l
 
 6. Command to produce an audit report:
+   sudo aureport -au
+
+   <img src="/Week_5_HW/IMAGE/step6report.png">
+
+![Optional](IMAGE/step6report.png)
 
 7. Create a user with `sudo useradd attacker` and produce an audit report that lists account modifications:
+   sudo useradd attacker
+
+   <img src="/Week_5_HW/IMAGE/step7attacker.png">
+
+![Optional](IMAGE/step7attacker.png)
 
 8. Command to use `auditd` to watch `/var/log/cron`:
 
+<img src="/Week_5_HW/IMAGE/step8cronaudit.png">
+
+![Optional](IMAGE/step8cronaudit.png)
+
 9. Command to verify `auditd` rules:
+
+<img src="/Week_5_HW/IMAGE/step9restartcron.png">
+
+![Optional](IMAGE/step9restartcron.png)
 
 ---
 
 ### Bonus (Research Activity): Perform Various Log Filtering Techniques
 
 1. Command to return `journalctl` messages with priorities from emergency to error:
+journalctl -p "emerg"   
+journalctl -p "alert"
+journalctl -p "crit"
+journalctl -p "err"
 
 1. Command to check the disk usage of the system journal unit since the most recent boot:
+sudo journalctl --disk-usage
 
 1. Comand to remove all archived journal files except the most recent two:
+sudo journalctl --vacuum-file=2
+Now I really have to head up stairs and do the vacuuming lol.
 
+<img src="/Week_5_HW/IMAGE/vacuumingisdone.png">
+
+![Optional](IMAGE/vacuumingisdone.png)
 
 1. Command to filter all log messages with priority levels between zero and two, and save output to `/home/sysadmin/Priority_High.txt`:
+sudo journalctl -p 0 >> /home/sysadmin/Priority_High.txt
+sudo journalctl -p 1 >> /home/sysadmin/Priority_High.txt
+sudo journalctl -p 2 >> /home/sysadmin/Priority_High.txt
+
+
+
 
 1. Command to automate the last command in a daily cronjob. Add the edits made to the crontab file below:
 
     ```bash
     [Your solution cron edits here]
+    0 6 * * *  journalctl -p 0 >> /home/sysadmin/Priority_High.txt
+    0 6 * * *  journalctl -p 1 >> /home/sysadmin/Priority_High.txt
+    0 6 * * *  journalctl -p 2 >> /home/sysadmin/Priority_High.txt
+
     ```
+
+    <img src="/Week_5_HW/IMAGE/cronjournalctl.png">
+
+![Optional](IMAGE/cronjournalctl.png)
 
 ---
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
