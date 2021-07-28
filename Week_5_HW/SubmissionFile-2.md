@@ -17,7 +17,7 @@ Save and submit the completed file for your homework submission.
 <img src="/Week_5_HW/IMAGE/step1_2.png">
 ![pic 2](IMAGE/step1_2.png)
 
-3. Command to ensure `Java/` is not in the new `Javaless_Docs.tar` archive: tar vvf Javaless_Doc.tar | grep Java
+3. Command to ensure `Java/` is not in the new `Javaless_Docs.tar` archive: tar tvvf Javaless_Doc.tar | grep Java
 
 
 **Bonus** 
