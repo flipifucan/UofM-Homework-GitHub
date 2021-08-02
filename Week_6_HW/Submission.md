@@ -7,56 +7,105 @@ Save and submit the completed file for your homework submission.
 **Step 1: Shadow People** 
 
 1. Create a secret user named `sysd`. Make sure this user doesn't have a home folder created:
-    - `Your solution command here`
+    - `sudo adduser sysd`
+
+    <img src="/Week_6_HW/IMAGE/adduser.png">
+
+![descprition](IMAGE/adduser.png)
+    
 
 2. Give your secret user a password: 
-    - `Your solution command here`
+    - `1234`
+    
 
 3. Give your secret user a system UID < 1000:
-    - `Your solution command here`
+    - `sudo usermod -u 888 sysd`
+    
 
 4. Give your secret user the same GID:
-   - `Your solution command here`
+   - `sudo groupmod -g 888 sysd`
+
+   <img src="/Week_6_HW/IMAGE/UIDGID.png">
+
+![descprition](IMAGE/UIDGID.png)
+    
 
 5. Give your secret user full `sudo` access without the need for a password:
-   -  `Your solution command here`
+   -  `sudo visudo then in visudo I typed sysd ALL=(ALL:ALL) NOPASSWD:ALL`
+
+    verify no home dir:
+    <br>
+   <img src="/Week_6_HW/IMAGE/nohome.png">
+
+![descprition](IMAGE/nohome.png)
+
+   
 
 6. Test that `sudo` access works without your password:
 
     ```bash
-    Your bash commands here
+    (ALL : ALL) NOPASSWD: ALL
     ```
+    <img src="/Week_6_HW/IMAGE/bash.png">
+
+![descprition](IMAGE/bash.png)
+
 
 **Step 2: Smooth Sailing**
 
 1. Edit the `sshd_config` file:
 
     ```bash
-    Your bash commands here
+    Port 2222
     ```
+
+    <img src="/Week_6_HW/IMAGE/ruffwater.png">
+
+![descprition](IMAGE/ruffwater.png)
 
 **Step 3: Testing Your Configuration Update**
 1. Restart the SSH service:
-    - `Your solution command here`
+    - `sudo systemcrl restart ssh`
+
+    <img src="/Week_6_HW/IMAGE/listening.png">
+
+![descprition](IMAGE/listening.png)
 
 2. Exit the `root` account:
-    - `Your solution command here`
+    - `exit`
 
 3. SSH to the target machine using your `sysd` account and port `2222`:
-    - `Your solution command here`
+    - `ssh sysadmin@192.168.6.105 -p 2222`
+
+    <img src="/Week_6_HW/IMAGE/port2222.png">
+
+![descprition](IMAGE/port2222.png)
 
 4. Use `sudo` to switch to the root user:
-    - `Your solution command here`
+    - `sudo su`
 
 **Step 4: Crack All the Passwords**
 
 1. SSH back to the system using your `sysd` account and port `2222`:
 
-    - `Your solution command here`
+    - `ssh sysd@192.168.6.105 -p 2222`
+
+    <img src="/Week_6_HW/IMAGE/loginhacker.png">
+
+![descprition](IMAGE/loginhacker.png)
+
 
 2. Escalate your privileges to the `root` user. Use John to crack the entire `/etc/shadow` file:
 
-    - `Your solution command here`
+    - `john /etc/shadow`
+
+    This was sooooo coooool!
+
+    <img src="/Week_6_HW/IMAGE/john.png">
+
+![descprition](IMAGE/john.png)
+
+I know it looks like a typo but I ran it again as you can see with shadow not shaow lol.
 
 ---
 
