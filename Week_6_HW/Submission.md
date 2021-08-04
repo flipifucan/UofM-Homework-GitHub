@@ -75,11 +75,11 @@ Save and submit the completed file for your homework submission.
     - `exit`
 
 3. SSH to the target machine using your `sysd` account and port `2222`:
-    - `ssh sysadmin@192.168.6.105 -p 2222`
+    - `ssh sysd@192.168.6.105 -p 2222`
 
-    <img src="/Week_6_HW/IMAGE/port2222.png">
+    <img src="/Week_6_HW/IMAGE/loginhacker.png">
 
-![descprition](IMAGE/port2222.png)
+![descprition](IMAGE/loginhacker.png)
 
 4. Use `sudo` to switch to the root user:
     - `sudo su`
