@@ -29,9 +29,9 @@ Save and submit the completed file for your homework submission.
 5. Give your secret user full `sudo` access without the need for a password:
    -  `sudo visudo then in visudo I typed sysd ALL=(ALL:ALL) NOPASSWD:ALL`
 
-    verify no home dir:
+    verify no home dir: 
 
-![descprition](IMAGE/nohome.png)
+![descprition](IMAGE/nohome.png) 
 
    
 

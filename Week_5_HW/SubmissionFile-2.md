@@ -9,12 +9,12 @@ Save and submit the completed file for your homework submission.
 ### Step 1: Create, Extract, Compress, and Manage tar Backup Archives
 
 1. Command to **extract** the `TarDocs.tar` archive to the current directory: tar -xvvf TarDocs.tar 
-<img src="/Week_5_HW/IMAGE/step1_1.png">
+<!---<img src="/Week_5_HW/IMAGE/step1_1.png"> --->
 ![pic 1](IMAGE/step1_1.png)
 
 2. Command to **create** the `Javaless_Doc.tar` archive from the `TarDocs/` directory, while excluding the `TarDocs/Documents/Java` directory:sudo tar -cvvf Javaless_Doc.tar --exclude='TarDocs/Documents/Java' TarDocs
 ( Important isuue is that we use relative path not absolute, and use the single quotes dam it!!! I ran this 40 times until it finally worked without cheating and deleting files via interface:))
-<img src="/Week_5_HW/IMAGE/step1_2.png">
+<!--- <img src="/Week_5_HW/IMAGE/step1_2.png"> --->
 ![pic 2](IMAGE/step1_2.png)
 
 3. Command to ensure `Java/` is not in the new `Javaless_Docs.tar` archive: tar tvvf Javaless_Doc.tar | grep Java
@@ -40,7 +40,7 @@ The screen shot is my result for my test of the job.
 This is the code for the assignment below.
 <br>
 0 6 * * 3 tar -czf /home/sysadmin/Projects/auth_backup.tgz /var/log/auth.log
-<img src="/Week_5_HW/IMAGE/step2_1cron.png">
+<!--- <img src="/Week_5_HW/IMAGE/step2_1cron.png"> -->
 ![step2 1](IMAGE/step2_1cron.png)
 ---
 
@@ -48,7 +48,7 @@ This is the code for the assignment below.
 
 1. Brace expansion command to create the four subdirectories:
     sysadmin@UbuntuDesktop:~$ mkdir ~/backups/{freemem,diskuse,openlist,freedisk}
-    <img src="/Week_5_HW/IMAGE/step3backups.png">
+    <!-- <img src="/Week_5_HW/IMAGE/step3backups.png"> -->
 ![step3 1](IMAGE/step3backups.png)
 2. Paste your `system.sh` script edits below:
 
@@ -88,13 +88,13 @@ df -h >> ~/backups/freedisk/free_disk.txt
     ```
 
 
-<img src="/Week_5_HW/IMAGE/step3backupsnano.png">
+<!-- <img src="/Week_5_HW/IMAGE/step3backupsnano.png"> -->
 
 ![step3 2](IMAGE/step3backupsnano.png)
 
 Optional:
 
-<img src="/Week_5_HW/IMAGE/catfreedisk.png">
+<!-- <img src="/Week_5_HW/IMAGE/catfreedisk.png"> -->
 
 ![Optional](IMAGE/catfreedisk.png)
 
@@ -164,7 +164,7 @@ Optional:
     -w /var/log/auth.log -p wra -k authlog_audit
     ```
 
-    <img src="/Week_5_HW/IMAGE/bonusstep3.png">
+     <!-- <img src="/Week_5_HW/IMAGE/bonusstep3.png"> 
 
 ![Optional](IMAGE/bonusstep3.png)
 
@@ -181,26 +181,26 @@ Optional:
 6. Command to produce an audit report:
    sudo aureport -au
 
-   <img src="/Week_5_HW/IMAGE/step6report.png">
+   <!-- <img src="/Week_5_HW/IMAGE/step6report.png">
 
 ![Optional](IMAGE/step6report.png)
 
 7. Create a user with `sudo useradd attacker` and produce an audit report that lists account modifications:
    sudo useradd attacker
 
-   <img src="/Week_5_HW/IMAGE/step7attacker.png">
+   <!-- <img src="/Week_5_HW/IMAGE/step7attacker.png">
 
 ![Optional](IMAGE/step7attacker.png)
 
 8. Command to use `auditd` to watch `/var/log/cron`:
 
-<img src="/Week_5_HW/IMAGE/step8cronaudit.png">
+ <!-- <img src="/Week_5_HW/IMAGE/step8cronaudit.png"> -->
 
 ![Optional](IMAGE/step8cronaudit.png)
 
 9. Command to verify `auditd` rules:
 
-<img src="/Week_5_HW/IMAGE/step9restartcron.png">
+<!-- <img src="/Week_5_HW/IMAGE/step9restartcron.png"> -->
 
 ![Optional](IMAGE/step9restartcron.png)
 
@@ -221,7 +221,7 @@ sudo journalctl --disk-usage
 sudo journalctl --vacuum-file=2
 Now I really have to head up stairs and do the vacuuming lol.
 
-<img src="/Week_5_HW/IMAGE/Vacuumingisdone.png">
+<!-- <img src="/Week_5_HW/IMAGE/Vacuumingisdone.png"> -->
 
 ![Optional](IMAGE/Vacuumingisdone.png)
 
@@ -243,7 +243,7 @@ sudo journalctl -p 2 >> /home/sysadmin/Priority_High.txt
 
     ```
 
-    <img src="/Week_5_HW/IMAGE/cronjournalctl.png">
+    <!-- <img src="/Week_5_HW/IMAGE/cronjournalctl.png">
 
 ![Optional](IMAGE/cronjournalctl.png)
 
