@@ -23,8 +23,6 @@ Save and submit the completed file for your homework submission.
 4. Give your secret user the same GID:
    - `sudo groupmod -g 888 sysd`
 
-   <img src="/Week_6_HW/IMAGE/UIDGID.png">
-
 ![descprition](IMAGE/UIDGID.png)
     
 
@@ -32,8 +30,6 @@ Save and submit the completed file for your homework submission.
    -  `sudo visudo then in visudo I typed sysd ALL=(ALL:ALL) NOPASSWD:ALL`
 
     verify no home dir:
-    <br>
-   <img src="/Week_6_HW/IMAGE/nohome.png">
 
 ![descprition](IMAGE/nohome.png)
 
@@ -44,8 +40,6 @@ Save and submit the completed file for your homework submission.
     ```bash
     (ALL : ALL) NOPASSWD: ALL
     ```
-    <img src="/Week_6_HW/IMAGE/bash.png">
-
 ![descprition](IMAGE/bash.png)
 
 
@@ -57,15 +51,11 @@ Save and submit the completed file for your homework submission.
     Port 2222
     ```
 
-    <img src="/Week_6_HW/IMAGE/ruffwater.png">
-
 ![descprition](IMAGE/ruffwater.png)
 
 **Step 3: Testing Your Configuration Update**
 1. Restart the SSH service:
     - `sudo systemcrl restart ssh`
-
-    <img src="/Week_6_HW/IMAGE/listening.png">
 
 ![descprition](IMAGE/listening.png)
 
@@ -74,8 +64,6 @@ Save and submit the completed file for your homework submission.
 
 3. SSH to the target machine using your `sysd` account and port `2222`:
     - `ssh sysd@192.168.6.105 -p 2222`
-
-    <img src="/Week_6_HW/IMAGE/loginhacker.png">
 
 ![descprition](IMAGE/loginhacker.png)
 
@@ -88,8 +76,6 @@ Save and submit the completed file for your homework submission.
 
     - `ssh sysd@192.168.6.105 -p 2222`
 
-    <img src="/Week_6_HW/IMAGE/loginhacker.png">
-
 ![descprition](IMAGE/loginhacker.png)
 
 
@@ -98,8 +84,6 @@ Save and submit the completed file for your homework submission.
     - `john /etc/shadow`
 
     This was sooooo coooool!
-
-    <img src="/Week_6_HW/IMAGE/john.png">
 
 ![descprition](IMAGE/john.png)
 
