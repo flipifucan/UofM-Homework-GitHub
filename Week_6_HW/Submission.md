@@ -87,6 +87,12 @@ Save and submit the completed file for your homework submission.
 
 ![descprition](IMAGE/john.png)
 
+<br>
+
+this is with --show way cool.
+
+![descprition](IMAGE/waycool.png)
+
 I know it looks like a typo but I ran it again as you can see with shadow not shaow lol.
 
 ---
